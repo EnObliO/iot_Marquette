@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block titre %}
+    Administration
+{% endblock %}
+
+{% block body %}
+    <h1>Administration</h1>
+    <p>Bienvenue sur l'administration !</p>
+
+    <a href="{{ url_for('admin_logout') }}">Déconnexion</a>
+    <div>
+      <h1>Ajouter un site</h1>
+      <form method="post">
+	<input type="text" placeholder="Nom du site" name="site_name" id="site_name">
+	<input type="text" placeholder="Url du site" name="site_url" id="site_url">
+	<input type="submit" value="Ajouter le site" name="site_submit">
+      </form>
+    </div>
+{% endblock %}
+
